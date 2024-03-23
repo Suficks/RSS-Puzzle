@@ -1,0 +1,61 @@
+@import 'shared/styles/mixins';
+
+.field {
+  display: grid;
+  box-sizing: border-box;
+  width: 700px;
+  height: 500px;
+  margin: auto;
+  margin-bottom: 50px;
+  border: 2px solid grey;
+
+  background-color: rgb(219 210 210);
+}
+
+.field_item_wrap {
+  position: relative;
+
+  height: 50px;
+}
+
+.number {
+  position: absolute;
+  top: 50%;
+  left: -50px;
+
+  box-sizing: border-box;
+
+  width: 40px;
+
+  height: 40px;
+
+  border: 1px solid #1e2935;
+  border-radius: 50%;
+
+  color: #1e2935;
+
+  background-color: rgb(219 210 210 / 60%);
+  transform: translateY(-50%);
+
+  transition: 0.3s ease;
+}
+
+.correct {
+  background: #82b782;
+}
+
+.incorrect {
+  background: #ff5959;
+}
+
+.field_items {
+  @include flex(center, flex-start);
+  margin: -2px;
+}
+
+@media screen and (width <= 860px) {
+  .field {
+    position: relative;
+    left: 23px;
+  }
+}

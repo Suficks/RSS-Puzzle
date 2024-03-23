@@ -1,0 +1,71 @@
+@import 'shared/styles/mixins';
+
+.start_page {
+  width: 650px;
+
+  text-align: center;
+}
+
+.title {
+  position: relative;
+
+  margin-bottom: 55px;
+
+  @include raleway(32px, 400, 45px);
+
+  &::before {
+    position: absolute;
+    top: -140%;
+    left: 50%;
+
+    width: 100px;
+    height: 100px;
+
+    background: url('../../shared/assets/images/title_logo.png');
+    transform: translate(-50%, -50%);
+
+    content: '';
+  }
+}
+
+.greeting {
+  margin-bottom: 55px;
+
+  opacity: 0;
+
+  animation: blink 2s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+
+  @include raleway(27px, 700, 27px);
+}
+
+.subtitle {
+  @include raleway(23px, 400, 28px);
+  margin-bottom: 40px;
+}
+
+.learn {
+  margin-bottom: 60px;
+}
+
+.start_btn {
+  display: block;
+  margin: auto;
+  margin-bottom: 25px;
+  padding: 15px 70px;
+}
+
+.log_out_btn {
+  padding: 15px 57px;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

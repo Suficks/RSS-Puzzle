@@ -1,0 +1,31 @@
+.welcome_modal {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  z-index: 9999;
+
+  width: 400px;
+  padding: 20px;
+  border-radius: 12px;
+
+  background-color: rgb(197 133 115);
+  box-shadow:
+    rgb(14 30 37 / 12%) 0 2px 4px 0,
+    rgb(14 30 37 / 32%) 0 2px 16px 0;
+  transform: translate(-50%, -50%);
+
+  transition: 1s ease;
+}
+
+.modal_title {
+  color: white;
+  text-align: center;
+}
+
+.modal_active {
+  top: 90px;
+}
+
+.bold {
+  font-weight: 700;
+}

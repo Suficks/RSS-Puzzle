@@ -1,0 +1,86 @@
+@import 'shared/styles/mixins';
+
+.main_page {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100vh;
+  padding: 20px;
+
+  text-align: center;
+}
+
+#my-canvas {
+  display: none;
+}
+
+.header {
+  @include flex(center, space-between);
+}
+
+.level_change {
+  @include flex(center, center, 30px);
+}
+
+.translation {
+  @include flex(center, center, 15px, column);
+  margin-bottom: 20px;
+}
+
+.auto_complete_btn {
+  margin-right: 20px;
+}
+
+.buttons_container {
+  display: inline-flex;
+  gap: 20px;
+}
+
+.continue_btn,
+.check_btn,
+.results_btn {
+  position: relative;
+
+  padding: 15px 75px 15px 50px;
+
+  background: #578d57;
+
+  animation: blink 1s;
+
+  &::after {
+    position: absolute;
+    top: 50%;
+
+    width: 35px;
+    height: 17px;
+
+    transform: translateY(-50%);
+
+    content: '➙';
+  }
+}
+
+.check_btn {
+  background: #b62626;
+
+  &::after {
+    content: '✓';
+  }
+}
+
+.results_btn {
+  background: #bea832;
+
+  &::after {
+    content: '✴';
+  }
+}
+
+.invisible {
+  display: none;
+}
+
+@media screen and (width <= 900px) {
+  .main_page {
+    padding: 10px;
+  }
+}

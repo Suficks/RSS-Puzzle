@@ -1,0 +1,47 @@
+@import 'shared/styles/mixins';
+
+.form_wrapper {
+  box-sizing: border-box;
+  width: 350px;
+  padding: 30px;
+  border-radius: 12px;
+
+  color: #b25863;
+  text-align: center;
+
+  background: rgb(255 255 255 / 70%);
+
+  @include flex(center, center, 15px, column);
+}
+
+.form_title {
+  margin-bottom: 15px;
+
+  font-weight: bold;
+}
+
+.form_subtitle {
+  @include raleway(18px, 400, 24px);
+}
+
+.form {
+  @include flex(center, center, 5px, column);
+}
+
+.input_wrap {
+  height: 59px;
+}
+
+.error {
+  display: none;
+  margin-top: 5px;
+
+  color: red;
+  text-align: start;
+
+  @include raleway(15px, 400, 16px);
+}
+
+.error_active {
+  display: block;
+}

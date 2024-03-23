@@ -1,0 +1,78 @@
+@import 'shared/styles/mixins';
+
+.menu_btn {
+  position: relative;
+
+  padding: 25px;
+}
+
+.off {
+  background-color: grey;
+}
+
+.translate {
+  background-image: url('../../shared/assets/images/translate.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.pronunciation,
+.pronunciation_switcher {
+  background-image: url('../../shared/assets/images/volume.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.background {
+  background-image: url('../../shared/assets/images/background_hint.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.pronunciation_switcher {
+  background-color: transparent;
+  opacity: 0;
+
+  &:not(.visible) {
+    pointer-events: none;
+  }
+
+  &:hover:not(.visible) {
+    opacity: 0;
+  }
+}
+
+.audio_play {
+  background-image: url('../../shared/assets/images/volume_active.png');
+
+  animation: pulse 1s infinite;
+
+  pointer-events: none;
+}
+
+.sentence {
+  font-style: italic;
+
+  opacity: 0;
+
+  @include raleway(22px, 400, 26px);
+  transition: 0.3s ease;
+}
+
+.visible {
+  opacity: 1;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

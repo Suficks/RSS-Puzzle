@@ -1,0 +1,36 @@
+@import 'shared/styles/mixins';
+
+.select_wrap {
+  @include flex(center, center, 10px);
+}
+
+.select {
+  box-sizing: border-box;
+  width: 70px;
+  padding: 5px 10px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+
+  @include raleway(18px, 400, 18px);
+
+  outline: none;
+  cursor: pointer;
+
+  &:focus {
+    box-shadow:
+      0 0 0 1px #8e7f7f,
+      0 0 10px #604c4c;
+  }
+}
+
+.option {
+  @include raleway(18px, 400, 20px);
+}
+
+.finished {
+  background-color: #56b856;
+}
+
+.unfinished {
+  background-color: #ccc;
+}
